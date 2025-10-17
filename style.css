@@ -16,7 +16,7 @@ header {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh; /* full viewport height */
+ height: calc(100vh - 120px); 
   background: linear-gradient(to bottom, #00122e, #00264d);
   display: flex;
   justify-content: center;
@@ -27,11 +27,17 @@ header {
 
 .hero-content {
   max-width: 900px;
+    width: 100%;   
   text-align: center;
   padding: 0; /* remove padding if you want full-width look */
   background: transparent; /* remove any black overlay */
   box-shadow: none; /* remove shadow */
   border-radius: 0; /* remove rounded corners */
+}
+
+header, footer {
+  position: relative; /* or fixed if you want sticky header/footer */
+  width: 100%;
 }
 
 .hero h2 {
