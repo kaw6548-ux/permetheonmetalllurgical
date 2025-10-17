@@ -24,9 +24,8 @@ header {
 
 .hero-content {
   max-width: 900px;
-  background: rgba(0,0,0,0.4);
   padding: 40px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  text-align: center;
 }
 
 /* Headings */
