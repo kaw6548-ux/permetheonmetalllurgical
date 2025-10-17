@@ -2,14 +2,14 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #000a1a, #001933); /* very dark blue gradient */
+  background: #000; /* fallback background */
   color: #f0f0f0;
   text-align: center;
 }
 
 /* Header */
 header {
-  background: linear-gradient(to right, #00132e, #00264d); /* dark blue gradient */
+  background: linear-gradient(to right, #000000, #1a1a1a); /* black → dark gray */
   color: white;
   padding: 40px 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.6);
@@ -29,7 +29,7 @@ header nav a:hover {
 /* Hero Section */
 .hero {
   padding: 80px 20px;
-  background: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to bottom, #00122e, #00264d); /* dark blue gradient */
   border-radius: 12px;
   max-width: 900px;
   margin: 60px auto;
@@ -62,7 +62,7 @@ button:hover {
 
 /* Footer */
 footer {
-  background: #00102a;
+  background: linear-gradient(to right, #000000, #1a1a1a); /* black → dark gray */
   color: #cccccc;
   padding: 20px 0;
   margin-top: 50px;
