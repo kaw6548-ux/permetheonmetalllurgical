@@ -7,6 +7,12 @@ body, html {
   background: #000; /* fallback for areas outside hero */
 }
 
+.hero .container {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 auto;
+}
+
 /* Header */
 header {
   background: linear-gradient(to right, #000000, #1a1a1a);
@@ -33,6 +39,10 @@ header {
   background: transparent; /* remove any black overlay */
   box-shadow: none; /* remove shadow */
   border-radius: 0; /* remove rounded corners */
+}
+body {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 header, footer {
