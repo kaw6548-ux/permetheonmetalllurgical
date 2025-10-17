@@ -21,10 +21,11 @@ header {
   justify-content: center;
   align-items: center;
 }
-
 .hero-content {
   max-width: 900px;
+  background: rgba(0,18,46,0.2); /* very subtle dark blue overlay */
   padding: 40px;
+  border-radius: 12px;
   text-align: center;
 }
 
