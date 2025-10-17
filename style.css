@@ -3,38 +3,42 @@ body, html {
   padding: 0;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
-  background: #000;
   color: #f0f0f0;
+  background: #000; /* fallback for areas outside hero */
 }
 
 /* Header */
 header {
   background: linear-gradient(to right, #000000, #1a1a1a);
   box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  z-index: 10;
 }
 
 /* Hero Section */
 .hero {
-  min-height: calc(100vh - 140px); /* full viewport minus header + footer */
+  min-height: 100vh; /* full viewport height */
   background: linear-gradient(to bottom, #00122e, #00264d);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.hero-content {
-  max-width: 900px;
-  background: rgba(0,18,46,0.2); /* very subtle dark blue overlay */
-  padding: 40px;
-  border-radius: 12px;
-  text-align: center;
+  margin: 0; /* remove default spacing */
+  padding: 0; /* remove default spacing */
 }
 
-/* Headings */
+.hero-content {
+  max-width: 900px;
+  text-align: center;
+  padding: 0; /* remove padding if you want full-width look */
+  background: transparent; /* remove any black overlay */
+  box-shadow: none; /* remove shadow */
+  border-radius: 0; /* remove rounded corners */
+}
+
 .hero h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* optional */
 }
 
 /* Footer */
@@ -42,6 +46,7 @@ footer {
   background: linear-gradient(to right, #000000, #1a1a1a);
   color: #cccccc;
   box-shadow: 0 -4px 6px rgba(0,0,0,0.6);
+  padding: 20px 0;
 }
 
 /* Button - override Bootstrap primary for custom dark blue */
