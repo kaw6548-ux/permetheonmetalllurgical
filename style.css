@@ -22,24 +22,22 @@ header {
 
 /* Hero Section */
 .hero {
- height: calc(100vh - 120px); 
-  background: linear-gradient(to bottom, #00122e, #00264d);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0; /* remove default spacing */
-  padding: 0; /* remove default spacing */
+  height: calc(100vh - 120px);
+  background: radial-gradient(circle at 50% 30%, #00264d, #000814 80%);
+  position: relative;
+  overflow: hidden;
+  background-image: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+background-blend-mode: overlay;
 }
 
-.hero-content {
-  max-width: 900px;
-    width: 100%;   
-  text-align: center;
-  padding: 0; /* remove padding if you want full-width look */
-  background: transparent; /* remove any black overlay */
-  box-shadow: none; /* remove shadow */
-  border-radius: 0; /* remove rounded corners */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 60% 40%, rgba(255, 140, 0, 0.15), transparent 70%);
+  pointer-events: none;
 }
+
 body {
   margin: 0 !important;
   padding: 0 !important;
@@ -72,8 +70,8 @@ footer {
   transition: 0.3s;
 }
 
+
 .btn-primary:hover {
-  background-color: #001f4d;
-  border-color: #001f4d;
+  background: linear-gradient(135deg, #ff6600, #cc5200);
   transform: scale(1.05);
 }
