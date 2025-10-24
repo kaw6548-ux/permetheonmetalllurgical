@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prometheon Metallurgical</title>
-  
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="py-4">
+  <!-- HEADER -->
+  <header class="py-3 fixed-top">
     <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="m-0">Prometheon Metallurgical</h1>
+      <h1 class="m-0 site-title">Prometheon <span>Metallurgical</span></h1>
       <nav>
-        <a href="#" class="text-white mx-2">Home</a>
-        <a href="#" class="text-white mx-2">About</a>
-        <a href="#" class="text-white mx-2">Services</a>
-        <a href="#" class="text-white mx-2">Contact</a>
+        <a href="#" class="nav-link active">Home</a>
+        <a href="learn-more.html" class="nav-link">Learn More</a>
+        <a href="#" class="nav-link">Services</a>
+        <a href="#" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
 
+  <!-- MAIN -->
   <main>
-    <section class="hero d-flex justify-content-center align-items-center">
-      <div class="hero-content text-center p-4 rounded">
-        <h2>Expert consulting for titanium and specialty metals, delivering precision and innovation.</h2>
-        <a href="#" class="btn btn-primary btn-lg mt-3">Learn More</a>
+    <section class="hero d-flex justify-content-center align-items-center text-center">
+      <div class="hero-content p-4 rounded">
+        <h2 class="mb-4">Forging the Future of Titanium and Specialty Metal Solutions</h2>
+        <p class="lead mb-4">
+          Precision. Innovation. Performance — engineered by experts in metallurgical consulting.
+        </p>
+        <a href="learn-more.html" class="btn btn-dark-custom btn-lg px-4">Learn More</a>
       </div>
     </section>
   </main>
 
-  <footer class="py-3 text-center">
-    <p class="m-0">&copy; 2025 Permetheon Metallurgical</p>
+  <!-- FOOTER -->
+  <footer class="text-center py-4">
+    <p class="m-0">&copy; 2025 Prometheon Metallurgical — All Rights Reserved</p>
   </footer>
 
-  <!-- Bootstrap JS (optional for components like dropdowns) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
