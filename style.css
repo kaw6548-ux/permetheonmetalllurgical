@@ -65,8 +65,8 @@ footer {
 
 /* Button - override Bootstrap primary for custom dark blue */
 .btn-primary {
-  background-color: #003366;
-  border-color: #003366;
+  background-color: black;
+  border-color: black;
   transition: 0.3s;
 }
 
