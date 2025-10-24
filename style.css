@@ -1,77 +1,126 @@
-body, html {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
-  color: #f0f0f0;
-  background: #000; /* fallback for areas outside hero */
+  color: #e6e6e6;
+  background: #000;
+  scroll-behavior: smooth;
 }
 
-.hero .container {
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0 auto;
-}
-
-/* Header */
+/* HEADER */
 header {
-  background: linear-gradient(to right, #000000, #1a1a1a);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
-  z-index: 10;
+  background: linear-gradient(90deg, #000000, #0a0a0a 40%, #1c1c1c 100%);
+  box-shadow: 0 2px 15px rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Hero Section */
+.site-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.site-title span {
+  background: linear-gradient(90deg, #00b3ff, #ff6600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* NAVIGATION */
+nav .nav-link {
+  color: #cccccc;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav .nav-link:hover {
+  color: #ff6600;
+  text-shadow: 0 0 6px rgba(255, 102, 0, 0.7);
+}
+
+/* HERO SECTION */
 .hero {
-  height: calc(100vh - 120px);
-  background: radial-gradient(circle at 50% 30%, #00264d, #000814 80%);
-  position: relative;
-  overflow: hidden;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 30%, #001a33, #000814 80%);
   background-image: url('https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMS1taXh0ZXh0dXJlLWFldy0zOV8xLmpwZw.jpg');
-background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  position: relative;
+  padding: 0 1rem;
 }
 
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 60% 40%, rgba(255, 140, 0, 0.15), transparent 70%);
-  pointer-events: none;
+  background: radial-gradient(circle at 60% 40%, rgba(255, 120, 0, 0.2), transparent 70%);
 }
 
-body {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-header, footer {
-  position: relative; /* or fixed if you want sticky header/footer */
-  width: 100%;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  border-radius: 1.2rem;
+  animation: fadeInUp 1.5s ease;
 }
 
 .hero h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 30px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* optional */
+  font-size: 2.2rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Footer */
-footer {
-  background: linear-gradient(to right, #000000, #1a1a1a);
+.hero p {
+  font-size: 1.1rem;
   color: #cccccc;
-  box-shadow: 0 -4px 6px rgba(0,0,0,0.6);
-  padding: 20px 0;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* Button - override Bootstrap primary for custom dark blue */
+/* BUTTONS */
 .btn-primary {
-  background-color: black;
-  border-color: black;
-  transition: 0.3s;
+  background: linear-gradient(135deg, #0077cc, #ff6600);
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: #fff;
 }
-
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #ff6600, #cc5200);
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff6600, #0077cc);
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.6);
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(90deg, #000000, #1a1a1a);
+  color: #999;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
