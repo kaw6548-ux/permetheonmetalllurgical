@@ -77,28 +77,35 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom JS -->
-  <script>
-    document.getElementById('appointmentForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("YOUR_PUBLIC_KEY"); // <-- replace with your EmailJS public key
+  })();
 
-      const appointment = {
-        name: document.getElementById('name').value.trim(),
-        phone: document.getElementById('phone').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        date: document.getElementById('date').value,
-        time: document.getElementById('time').value
-      };
+  document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-      const response = await fetch('/api/book', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(appointment)
+    const form = this;
+    const appointment = {
+      name: form.name.value.trim(),
+      phone: form.phone.value.trim(),
+      email: form.email.value.trim(),
+      date: form.date.value,
+      time: form.time.value
+    };
+
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", appointment)
+      .then(function() {
+        document.getElementById('responseMsg').innerHTML = 
+          '<div class="alert alert-success">Appointment booked successfully! Confirmation sent.</div>';
+        form.reset();
+      }, function(error) {
+        console.log(error);
+        document.getElementById('responseMsg').innerHTML = 
+          '<div class="alert alert-danger">There was an issue sending your booking. Please try again later.</div>';
       });
-
-      const data = await response.json();
-      document.getElementById('responseMsg').innerText = data.message;
-      document.getElementById('appointmentForm').reset();
-    });
-  </script>
+  });
+</script>
 </body>
 </html>
