@@ -22,6 +22,9 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.offset-header {
+  padding-top: 160px; /* adjust until it looks right */
+}
 .appointment-section {
   min-height: 100vh;
   padding-top: 160px; /* increased from 120px */
