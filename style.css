@@ -22,10 +22,11 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.main {
-  margin: 0 auto;
-  max-width: 900px;
-  padding: 20px;
+.appointment-section {
+  background: radial-gradient(circle at top left, #001a33, #000814 80%);
+  min-height: 100vh;
+  padding: 120px 0; /* padding-top pushes content below header */
+  color: #e6e6e6;
 }
 
 .site-title span {
