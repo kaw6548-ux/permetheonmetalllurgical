@@ -73,46 +73,47 @@
     <p class="m-0">&copy; 2025 Prometheon Metallurgical — All Rights Reserved</p>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- EmailJS SDK -->
- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-   <script>
-    // Initialize EmailJS
-    (function() {
-      emailjs.init("4gL207QZcJ-6Ilr5L"); // 🔹 Replace with your EmailJS public key
-    })();
+<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    // Form submission handler
-    document.getElementById("appointmentForm").addEventListener("submit", function(event) {
-      event.preventDefault();
+<script>
+  // Initialize EmailJS
+  (function() {
+    emailjs.init("4gL207QZcJ-6Ilr5L"); // 🔹 Replace with your own public key
+  })();
 
-      const appointment = {
-        name: this.name.value.trim(),
-        phone: this.phone.value.trim(),
-        email: this.email.value.trim(),
-        date: this.date.value,
-        time: this.time.value
-      };
+  // Form submission handler
+  document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-      // Optional: save locally as JSON (for debugging or local use)
-      localStorage.setItem("lastAppointment", JSON.stringify(appointment));
+    // Capture form field values using correct element IDs
+    const appointment = {
+      name: document.getElementById("name").value.trim(),
+      phone: document.getElementById("phone").value.trim(),
+      email: document.getElementById("email").value.trim(),
+      date: document.getElementById("date").value,
+      time: document.getElementById("time").value
+    };
 
-      // Send the email through EmailJS
-      emailjs.send("service_r2yfxwo", "template_xwk3pvd", appointment)
-        .then(() => {
-          document.getElementById("responseMsg").innerHTML =
-            '<div class="alert alert-success">✅ Appointment booked successfully! A confirmation email has been sent.</div>';
-          this.reset();
-        })
-        .catch((error) => {
-          console.error("Email send error:", error);
-          document.getElementById("responseMsg").innerHTML =
-            '<div class="alert alert-danger">❌ There was an issue sending your booking. Please try again later.</div>';
-        });
-    });
-  </script>
+    // Optional: store the appointment locally for debugging
+    localStorage.setItem("lastAppointment", JSON.stringify(appointment));
+
+    // Send the email through EmailJS
+    emailjs.send("service_r2yfxwo", "template_xwk3pvd", appointment)
+      .then(() => {
+        document.getElementById("responseMsg").innerHTML =
+          '<div class="alert alert-success">✅ Appointment booked successfully! A confirmation email has been sent.</div>';
+        document.getElementById("appointmentForm").reset();
+      })
+      .catch((error) => {
+        console.error("Email send error:", error);
+        document.getElementById("responseMsg").innerHTML =
+          '<div class="alert alert-danger">❌ There was an issue sending your booking. Please try again later.</div>';
+      });
+  });
+</script>
 </body>
 </html>
 </body>
