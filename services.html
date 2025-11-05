@@ -100,7 +100,7 @@
       localStorage.setItem("lastAppointment", JSON.stringify(appointment));
 
       // Send the email through EmailJS
-      emailjs.send("service_sbzlaun", "template_xwk3pvd", appointment)
+      emailjs.send("service_r2yfxwo", "template_xwk3pvd", appointment)
         .then(() => {
           document.getElementById("responseMsg").innerHTML =
             '<div class="alert alert-success">✅ Appointment booked successfully! A confirmation email has been sent.</div>';
