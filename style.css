@@ -23,12 +23,12 @@ header {
   letter-spacing: 1px;
 }
 .appointment-section {
-  background: radial-gradient(circle at top left, #001a33, #000814 80%);
   min-height: 100vh;
-  padding: 120px 0; /* padding-top pushes content below header */
+  padding-top: 160px; /* increased from 120px */
+  padding-bottom: 80px;
+  background: radial-gradient(circle at top left, #001a33, #000814 80%);
   color: #e6e6e6;
 }
-
 .site-title span {
   background: linear-gradient(90deg, #00b3ff, #ff6600);
   -webkit-background-clip: text;
