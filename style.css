@@ -22,6 +22,9 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.main-content {
+  padding-top: 80px !important; /* force override */
+}
 .offset-header {
   padding-top: 180px; /* adjust until it looks right */
 }
