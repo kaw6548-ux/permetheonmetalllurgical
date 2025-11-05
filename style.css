@@ -22,6 +22,11 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.main {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 20px;
+}
 
 .site-title span {
   background: linear-gradient(90deg, #00b3ff, #ff6600);
