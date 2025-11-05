@@ -25,16 +25,7 @@ header {
 .main-content {
   padding-top: 80px !important; /* force override */
 }
-.offset-header {
-  padding-top: 180px; /* adjust until it looks right */
-}
-.appointment-section {
-  min-height: 150vh;
-  padding-top: 180px; /* increased from 120px */
-  padding-bottom: 90px;
-  background: radial-gradient(circle at top left, #001a33, #000814 80%);
-  color: #e6e6e6;
-}
+
 .site-title span {
   background: linear-gradient(90deg, #00b3ff, #ff6600);
   -webkit-background-clip: text;
