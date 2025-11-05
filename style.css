@@ -25,6 +25,13 @@ header {
 .main-content {
   padding-top: 80px !important; /* force override */
 }
+.services-section {
+  background: radial-gradient(circle at top left, #001a33, #000814 80%);
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding-top: 120px; /* adjusts for navbar */
+  padding-bottom: 80px;
+}
 
 .site-title span {
   background: linear-gradient(90deg, #00b3ff, #ff6600);
