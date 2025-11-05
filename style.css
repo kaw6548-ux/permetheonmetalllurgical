@@ -23,12 +23,12 @@ header {
   letter-spacing: 1px;
 }
 .offset-header {
-  padding-top: 160px; /* adjust until it looks right */
+  padding-top: 180px; /* adjust until it looks right */
 }
 .appointment-section {
-  min-height: 100vh;
-  padding-top: 160px; /* increased from 120px */
-  padding-bottom: 80px;
+  min-height: 150vh;
+  padding-top: 180px; /* increased from 120px */
+  padding-bottom: 90px;
   background: radial-gradient(circle at top left, #001a33, #000814 80%);
   color: #e6e6e6;
 }
