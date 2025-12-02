@@ -33,7 +33,7 @@ app.post("/api/book", (req, res) => {
 
   const mailOptions = {
     from: "yourgmail@gmail.com",
-    to: "kaitwils11@gmail.com, cwilson@prometheonmetals.com",
+    to: "cwilson@prometheonmetals.com",
     subject: "Inquiry Request for Prometheon Metallurgical Consultation Services",
     text: `
 New appointment booked:
