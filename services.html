@@ -32,8 +32,8 @@
 <main class="services-section text-center">
   <div style="height: 80px; background: radial-gradient(circle at top left, #001a33, #000814 80%"></div> 
     <div class="container">
-      <h2 class="section-title mb-4">Book a Consulting Appointment</h2>
-      <p class="lead mb-5">Schedule a personalized consultation with our metallurgical experts.</p>
+      <h2 class="section-title mb-4">Inquiry for Prometheon Metallurgical Services</h2>
+      <p class="lead mb-5">Submit your contact information to schedule a consultation appointment.</p>
 
       <form id="appointmentForm" class="mx-auto" style="max-width: 600px;">
         <div class="mb-3">
@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-dark-custom w-100 mt-3">Book Appointment</button>
+        <button type="submit" class="btn btn-dark-custom w-100 mt-3">Submit Information</button>
       </form>
 
       <div id="responseMsg" class="mt-4"></div>
@@ -105,13 +105,13 @@
     emailjs.send("service_r2yfxwo", "template_kyudz1j", appointment)
       .then(() => {
         document.getElementById("responseMsg").innerHTML =
-          '<div class="alert alert-success">✅ Appointment booked successfully! A confirmation email has been sent.</div>';
+          '<div class="alert alert-success">✅ Information submitted successfully! A confirmation email has been sent.</div>';
         document.getElementById("appointmentForm").reset();
       })
       .catch((error) => {
         console.error("Email send error:", error);
         document.getElementById("responseMsg").innerHTML =
-          '<div class="alert alert-danger">❌ There was an issue sending your booking. Please try again later.</div>';
+          '<div class="alert alert-danger">❌ There was an issue sending your information. Please try again later.</div>';
       });
   });
 </script>
