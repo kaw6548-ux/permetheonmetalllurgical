@@ -33,8 +33,8 @@ app.post("/api/book", (req, res) => {
 
   const mailOptions = {
     from: "yourgmail@gmail.com",
-    to: "kaitwils11@gmail.com",
-    subject: "New Consulting Appointment Booked",
+    to: "kaitwils11@gmail.com, cwilson@prometheonmetals.com",
+    subject: "Inquiry Request for Prometheon Metallurgical Consultation Services",
     text: `
 New appointment booked:
 Name: ${appointment.name}
@@ -48,9 +48,9 @@ Time: ${appointment.time}
   transporter.sendMail(mailOptions, (error) => {
     if (error) {
       console.error("Email failed:", error);
-      res.json({ message: "Appointment saved, but email failed to send." });
+      res.json({ message: "Information saved, but email failed to send." });
     } else {
-      res.json({ message: "Appointment booked and email sent successfully!" });
+      res.json({ message: "Inquiry request email sent successfully!" });
     }
   });
 });
