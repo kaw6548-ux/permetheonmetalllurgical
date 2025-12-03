@@ -38,10 +38,12 @@ app.post("/api/book", (req, res) => {
     text: `
 New appointment booked:
 Name: ${appointment.name}
+Title: ${appointment.title}
+Company: ${appointment.company}
+Location: ${appointment.location}
 Phone: ${appointment.phone}
 Email: ${appointment.email}
-Date: ${appointment.date}
-Time: ${appointment.time}
+Project: ${appointment.project}
     `
   };
 
