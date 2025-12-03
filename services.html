@@ -56,11 +56,6 @@
           <label for="location" class="form-label">Location  *</label>
           <input type="text" class="form-control" id="location" required>
         </div>
-
-        <div class="mb-2">
-          <label for="project" class="form-label">Project Inquiry  *</label>
-          <input type="text" class="form-control" id="project" required>
-        </div>
         
         <div class="mb-2">
           <label for="phone" class="form-label">Phone Number  *</label>
@@ -71,12 +66,12 @@
           <label for="email" class="form-label">Email Address  *</label>
           <input type="email" class="form-control" id="email" required>
         </div>
-
+        
         <div class="mb-2">
-          <label for="title" class="form-label">Title  *</label>
-          <input type="text" class="form-control" id="title" required>
+          <label for="project" class="form-label">Project Inquiry  *</label>
+          <input type="text" class="form-control" id="project" required>
         </div>
-
+        
         </div>
 
         <button type="submit" class="btn btn-dark-custom w-100 mt-3">Submit Information</button>
@@ -109,10 +104,12 @@
     // Capture form field values using correct element IDs
     const appointment = {
       name: document.getElementById("name").value.trim(),
+      title: document.getElementById("title").value.trim(),
+      company: document.getElementById("company").value.trim(),
+      location: document.getElementById("location").value.trim(),
       phone: document.getElementById("phone").value.trim(),
       email: document.getElementById("email").value.trim(),
-      date: document.getElementById("date").value,
-      time: document.getElementById("time").value
+      project: document.getElementById("project").value.trim()
     };
 
     // Optional: store the appointment locally for debugging
